@@ -59,17 +59,17 @@ export default function HomePage() {
     }
   }
 
-  const deposit = async() => {
+  const gcd = async() => {
     if (atm) {
-      let tx = await atm.deposit(1);
+      let tx = await atm.gcd(10,20);
       await tx.wait()
       getBalance();
     }
   }
 
-  const withdraw = async() => {
+  const lcm = async() => {
     if (atm) {
-      let tx = await atm.withdraw(1);
+      let tx = await atm.lcm(12,24);
       await tx.wait()
       getBalance();
     }
@@ -94,8 +94,8 @@ export default function HomePage() {
       <div>
         <p>Your Account: {account}</p>
         <p>Your Balance: {balance}</p>
-        <button onClick={deposit}>Deposit 1 ETH</button>
-        <button onClick={withdraw}>Withdraw 1 ETH</button>
+        <button onClick={gcd}>GCD </button>
+        <button onClick={lcm}>LCM</button>
       </div>
     )
   }
@@ -104,7 +104,7 @@ export default function HomePage() {
 
   return (
     <main className="container">
-      <header><h1>Welcome to the Metacrafters ATM!</h1></header>
+      <header><h1>MATHEMATICS</h1><h2>HCF AND LCM !</h2></header>
       {initUser()}
       <style jsx>{`
         .container {
