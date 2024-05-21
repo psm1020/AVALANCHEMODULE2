@@ -18,8 +18,6 @@ contract Assessment {
         return balance;
     }
 
-
-    // Function to compute the greatest common divisor (GCD) of two integers
     function gcd(uint a, uint b) public payable {
         while (b != 0) {
             uint temp = b;
@@ -31,7 +29,6 @@ contract Assessment {
 
 
 
-    // Function to compute the least common multiple (LCM) of two integers
     function lcm(uint a, uint b) public payable  {
         
 
